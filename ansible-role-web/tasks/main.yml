@@ -1,0 +1,15 @@
+- name: Create templates folder
+  file:
+    path: /home/ec2-user/templates
+    state: directory
+
+- name: Deploy HTML file
+  copy:
+    src: index.html
+    dest: /home/ec2-user/templates/index.html
+    force: yes
+
+- name: Run the app
+  shell: nohup python3 /home/ec2-user/app.py > output.log 2>&1 &
+  args:
+    chdir: /home/ec2-user/

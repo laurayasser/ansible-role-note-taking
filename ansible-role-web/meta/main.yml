@@ -1,0 +1,18 @@
+galaxy_info:
+  author: laurayasser
+  description: Deploys a Flask note-taking app using Ansible
+  company: Personal
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Amazon
+      versions:
+        - 2
+        - 2023
+        - all
+
+  role_name: web 
+  namespace: laurayasser  
+
+dependencies: []
